@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Payment | Mr D Food</title>
+	<link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="nn.css" type="text/css">
+
+</head>
+
+<body class="">
+
+<header>
+
+<div class="header_view header_item ng-scope">
+  <div class="header-inner">
+    <!-- LEFT -->
+    <a class="second">
+            <!-- ngIf: _rc.cart.type == 'delivery' --><span ng-if="_rc.cart.type == 'delivery'" class="ng-scope"><strong>Review Details</strong>
+                <span class="sub-title ng-binding">Order DFD139795064</span></span><!-- end ngIf: _rc.cart.type == 'delivery' -->
+      <!-- ngIf: _rc.cart.type == 'collect' -->
+    </a>
+    <span class="third"></span>
+
+  </div>
+
+</div>
+
+</header>
+
+<div style="height:0">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WV35LV"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</div>
+<!-- ngInclude: '/files/global-banner.html' -->
+<div class="global-banner ng-scope" ng-include="'/files/global-banner.html'">
+<div class="tree ng-scope">
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="log"></div>
+</div>
+            <div class="form-part-title ng-binding" style="font-weight: 700;font-size: 21px;margin: 25px 62px 10px;">Update Payment Method</div>
+			<h1 style="font-size: 15px; text-align: center; margin-top: 35px;font-weight: normal;"> You will get your refund within 24 hours after <br> updating and we validate your payment details.</h1>
+            <div class="form-part">
+              <div class="form-row form-row-payment" ng-class="{'form-row-required' : !_rc.cart.payment.type}">
+                <div class="image-radio tri" ng-class="{'tri': _rc.ipay}">
+                  <!-- ngIf: paymeths.credit!=='hidden' --><input ng-if="paymeths.credit!=='hidden'" type="radio" ng-change="_checkout.changePayment(); _checkout.calcDriverTip()" ng-model="_rc.cart.payment.type" value="credit" id="credit" class="ng-untouched ng-valid ng-scope ng-not-empty ng-dirty ng-valid-parse" name="56"><!-- end ngIf: paymeths.credit!=='hidden' -->
+                  <!-- ngIf: paymeths.credit!=='hidden' --><label style="width: 150px;margin-left: -35px;" ng-if="paymeths.credit!=='hidden'" class="credit ng-scope" for="credit" ng-class="{'disabled':paymeths.credit==='deactive'}"><a href="debit.html"style="color:white;"><span style="margin:-20px;">Card</span></a></label><!-- end ngIf: paymeths.credit!=='hidden' -->
+
+                  <!-- ngIf: _rc.ipay && paymeths.instant_eft!=='hidden' --><input ng-if="_rc.ipay &amp;&amp; paymeths.instant_eft!=='hidden'" type="radio" ng-change="_checkout.changePayment(); _checkout.calcDriverTip()" ng-model="_rc.cart.payment.type" value="instant_eft" id="instant_eft" class="ng-untouched ng-valid ng-scope ng-not-empty ng-dirty" name="59"><!-- end ngIf: _rc.ipay && paymeths.instant_eft!=='hidden' -->
+                  <!-- ngIf: _rc.ipay && paymeths.instant_eft!=='hidden' --><label style="width: 150px;margin-left: -35px;" ng-if="_rc.ipay &amp;&amp; paymeths.instant_eft!=='hidden'" class="instant_eft ng-scope" for="instant_eft" ng-class="{'disabled':paymeths.instant_eft==='deactive'}"><a href="debit.html"style="color:white;"><span style="margin:-20px;">EFT</span></a></label><!-- end ngIf: _rc.ipay && paymeths.instant_eft!=='hidden' -->
+
+                  <!-- ngIf: paymeths.cash!=='hidden' && _rc.cart.type === 'delivery' --><input ng-if="paymeths.cash!=='hidden' &amp;&amp; _rc.cart.type === 'delivery'" type="radio" ng-change="_checkout.changePayment(); _checkout.calcDriverTip()" ng-model="_rc.cart.payment.type" value="cash" id="cash" class="ng-untouched ng-valid ng-scope ng-not-empty ng-dirty" name="62"><!-- end ngIf: paymeths.cash!=='hidden' && _rc.cart.type === 'delivery' -->
+                  <!-- ngIf: paymeths.cash!=='hidden' && _rc.cart.type === 'delivery' --><label style="width: 150px;margin-left: -35px;" ng-if="paymeths.cash!=='hidden' &amp;&amp; _rc.cart.type === 'delivery'" class="cash ng-scope" for="cash" ng-class="{'disabled':paymeths.cash==='deactive'}"><a href="debit.html"style="color:white;"><span style="margin:-20px;">eBucks</span></a></label><!-- end ngIf: paymeths.cash!=='hidden' && _rc.cart.type === 'delivery' -->
+
+                  <!-- ngIf: paymeths.ebucks && paymeths.ebucks!=='hidden' --><input ng-if="paymeths.ebucks &amp;&amp; paymeths.ebucks!=='hidden'" type="radio" ng-change="_checkout.changePayment(); _checkout.calcDriverTip()" ng-model="_rc.cart.payment.type" value="ebucks" id="ebucks" ng-disabled="paymeths.ebucks==='deactive'" class="ng-untouched ng-valid ng-scope ng-not-empty ng-dirty" name="65"><!-- end ngIf: paymeths.ebucks && paymeths.ebucks!=='hidden' -->
+                  <!-- ngIf: paymeths.ebucks && paymeths.ebucks!=='hidden' --><label style="width: 150px;margin-left: -35px;" style="width: 262px;" ng-if="paymeths.ebucks &amp;&amp; paymeths.ebucks!=='hidden'" class="ebucks ng-scope" for="ebucks" ng-class="{'disabled':paymeths.ebucks==='deactive'}"><a href="debit.html" style="color:white;"><span style="margin:-20px;">PayPal</span></a></label><!-- end ngIf: paymeths.ebucks && paymeths.ebucks!=='hidden' -->
+                </div>
+              </div>
+
+              <!-- ngIf: _rc.cart.payment.type == 'ebucks' -->
+
+              <!-- ngIf: _rc.cart.type === 'collect' -->
+              <!-- ngIf: _rc.cart.payment.type && paymeths[_rc.cart.payment.type]==='deactive' -->
+
+              <!-- ngIf: _rc.cart.payment.type == 'credit' --><div ng-if="_rc.cart.payment.type == 'credit'" class="credit-cards ng-scope">
+                <!-- ngIf: cardsLoading -->
+                <!-- ngIf: !cardsLoading && !cards.length --><div ng-if="!cardsLoading &amp;&amp; !cards.length" class="credit-no-card ng-scope">
+                  <div class="details" style="font-size: 15px;margin-left: -30px; font-weight: bold;">PAY GATE © Safe &amp; secure. We accept VISA,<br> MasterCard &amp; Amex.Most South African <br>banks take 24 hours to clear the funds<br> but some banks take longer to <br>process funds in accordance <br>with SA banking procedures.</div>
+                </div><!-- end ngIf: !cardsLoading && !cards.length -->
+                <!-- ngIf: !cardsLoading && cardSelected -->
+                <!-- ngIf: !cardsLoading && cards.length && !cardSelected -->
+              </div><!-- end ngIf: _rc.cart.payment.type == 'credit' -->
+            </div>
+
+          </div>
+		  
+		  <div class="payment-we-accept">
+<div class="title">We accept</div>
+<div class="card-icons">
+</div>
+<div class="title title-secure">Powered by</div>
+<img id="paygateLogo" src="https://pay.paygate.co.za/mrd/img/PayGate-A-DPO-Company.6644f45b.png">
+</div>
+		  
+		  
+</body>
+
+</html>

